@@ -5,7 +5,7 @@ function [MAGdata,MAGdataName,MAGdataFields] = RunGetApr14ACE0854UT()
 startTime = datenum([2013 04 14 08 00 00]);
 endTime = datenum(  [2013 04 14 09 40 00]);
 
-hdfFN = '../ACE/ACE_BROWSE_2013-001_to_current.HDF';
+hdfFN = '~/data/ACE/ACE_BROWSE_2013-001_to_current.HDF';
 
 
 MAGdataFields = {'fp_year','DOY','B_rtn_r_MAG','B_rtn_t_MAG','B_rtn_n_MAG',...
@@ -19,7 +19,7 @@ fpYearReq = datenum2fpYear([startTime,endTime]);
 
 [MAGdata,MAGdataName] = loadACEhdf(hdfFN,fpYearReq,MAGdataFields);
 
-display(['loaded data from ',MAGdataName])
+disp(['loaded data from ',MAGdataName])
 
 %% make plots
 h.F = figure;
