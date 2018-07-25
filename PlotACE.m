@@ -1,9 +1,7 @@
-function [MAGdata,MAGdataName,MAGdataFields] = RunGetApr14ACE0854UT()
+function [MAGdata,MAGdataName,MAGdataFields] = PlotACE(startTime, endTime)
 
 
 %% user parameters
-startTime = datenum([2013 04 14 08 00 00]);
-endTime = datenum(  [2013 04 14 09 40 00]);
 
 hdfFN = '~/data/ACE/ACE_BROWSE_2013-001_to_current.HDF';
 
@@ -21,7 +19,7 @@ fpYearReq = datenum2fpYear([startTime,endTime]);
 
 disp(['loaded data from ',MAGdataName])
 
-%% make plots
+%% plots
 h.F = figure;
 
 Nheader = 2;
@@ -39,11 +37,9 @@ for i = 1:Nsub
    plot(dateV,MAGdata{Nheader+i},'-s')
    ylabel([MAGdataFields{i+Nheader},' [',MAGdataUnits{i+Nheader},']'],'interpreter','none')   
    datetick
-   
 end
 xlabel('Time [UTC]')
     
 title(si(1),['ACE data, from ',datestr(dateV(1)),' to ',datestr(dateV(end))])
-
 
 end

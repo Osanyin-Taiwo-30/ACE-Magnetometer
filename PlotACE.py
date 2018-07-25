@@ -5,9 +5,11 @@ Load and Plot ACE Magnetometer data: 16-second averaged
 from argparse import ArgumentParser
 from matplotlib.pyplot import figure, show
 import pandas as pd
+import matplotlib.dates as mdates
 import ace_magnetometer as am
 import seaborn as sns
 sns.set_context('talk')
+sns.set_style('whitegrid')
 
 
 def main():
@@ -44,6 +46,9 @@ def plot(dat: pd.DataFrame):
     ax.set_ylim(-50, 50)
 
     axs[-1].set_xlabel('time [UTC]')
+    axs[-1].xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
+    
+    fg.suptitle(f'ACE magnetometer {dat.index[1].date()}')
 
 
 if __name__ == '__main__':

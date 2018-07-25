@@ -8,7 +8,9 @@
 
 # ACE magnetometer: Load and plot
 
-Load and Plot ACE satelite magnetometer data from Matlab/Octave and Python.
+Load and Plot ACE satelite magnetometer data for Python.
+
+![ACE magnetometer time series plot](tests/timeplot.png)
 
 
 ## Data
@@ -28,6 +30,7 @@ PlotACE.py 2012-02-03 ~/data
 ```
 
 ## Matlab
+Matlab is not regularly used.
 
 ```matlab
 PlotACE()

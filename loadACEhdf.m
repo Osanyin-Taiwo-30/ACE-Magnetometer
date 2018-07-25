@@ -6,8 +6,7 @@ function [MAGdata,MAGdataName] = loadACEhdf(hdfFN,fpYearReq,MAGdataFields)
 % --------
 %
 % hdfFN: filename of HDF5 datafile to read
-% yearDOY: year.doy [start stop]  E.g. to retreive 2013-04-14T08-54-00 to
-% 2013-04-14T08-55-00, yearDOY= [2013.
+% yearDOY: year.doy [start stop] e.g. [datetime('2012-02-12'), datetime('2012-02-14')]
 
 statHDF = hdfinfo(hdfFN);
 

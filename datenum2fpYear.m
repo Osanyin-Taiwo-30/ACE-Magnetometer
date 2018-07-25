@@ -3,8 +3,7 @@ function fpYear = datenum2fpYear(datenumvector)
 % converts "datenum" format dates into the day of year format.
 %
 % Michael Hirsch June 2013
-%
-%
+
  
 [year,~] = datevec(datenumvector);
 year = unique(year);
@@ -20,8 +19,6 @@ dayOfYear = datenumvector - datenum(year,1,1,0,0,0) + 1;
 fracYear = (dayOfYear-1)/daysInYear;
  
 fpYear = year+fracYear;
- 
- 
  
  
 end
