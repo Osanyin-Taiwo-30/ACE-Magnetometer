@@ -12,14 +12,9 @@ Load and Plot ACE satelite magnetometer data for Python.
 
 ![ACE magnetometer time series plot](tests/timeplot.png)
 
-
-## Data
-
-Get data from [FTP site](ftp://mussel.srl.caltech.edu/pub/ace/browse/MAG16sec).
-
 ## Python
 
-Download ACE magnetometer 16 second cadence by date:
+Get data from FTP site ftp://mussel.srl.caltech.edu/pub/ace/browse/MAG16sec automatically: ACE magnetometer 16 second cadence by date:
 ```sh
 DownloadACE.py 2012-02-03 ~/data
 ```
