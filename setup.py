@@ -1,3 +1,3 @@
-#!/usr/bine/nv python
-import setuptools
-setuptools.setup()
+#!/usr/bin/env python
+from setuptools import setup
+setup()

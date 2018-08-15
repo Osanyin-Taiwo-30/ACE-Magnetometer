@@ -32,7 +32,7 @@ def download(dt: Union[str, date, datetime], odir: Path):
     stem = date2filename(dt)
     fn = odir / stem
 
-    if zipfile.is_zipfile(fn):
+    if zipfile.is_zipfile(fn):  # type: ignore
         print('SKIP:', fn)
         return
 

@@ -47,7 +47,7 @@ def plot(dat: pd.DataFrame):
 
     axs[-1].set_xlabel('time [UTC]')
     axs[-1].xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
-    
+
     fg.suptitle(f'ACE magnetometer {dat.index[1].date()}')
 
 
