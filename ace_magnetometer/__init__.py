@@ -57,7 +57,7 @@ def load(dt: date, path: Path) -> pd.DataFrame:
     fn = path / stem
 
     with zipfile.ZipFile(fn).open(fn.stem) as f:
-        dat = pd.read_csv(f, sep='\s+', comment='#', header=None, index_col=False,
+        dat = pd.read_csv(f, sep=r'\s+', comment='#', header=None, index_col=False,
                           usecols=[1, 3, 4, 5, 6, 7, 8, 9, 10],
                           names=['time', 'Br', 'Bt', 'Bn', 'Bx', 'By', 'Bz', 'Btotal', 'dBrms'])
 
